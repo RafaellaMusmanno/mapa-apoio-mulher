@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa de Apoio à Mulher – Niterói</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body, #root { height: 100%; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+    /* Esconde o atrib do Leaflet p/ não poluir o layout */
+    .leaflet-control-attribution { font-size: 9px !important; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Leaflet JS (antes do bundle React) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Vite/CRA injeta o bundle aqui automaticamente -->
+</body>
+</html>
