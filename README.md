@@ -13,7 +13,9 @@ Leaflet.js — mapa interativo com OpenStreetMap
 3 CRUDs completos:
 
 Usuários — cadastro, listagem, atualização e remoção
+
 Serviços — cadastro, busca por categoria, atualização e remoção
+
 Avaliações — criar, listar por serviço, calcular média, atualizar e remover
 
 Funcionalidades do sistema:
