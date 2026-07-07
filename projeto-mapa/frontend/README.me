@@ -1,0 +1,82 @@
+README – Frontend
+Mapa de Apoio à Mulher – Niterói/RJ
+Tecnologia: ReactJS 18 + Vite + Leaflet.js
+---
+Como rodar
+```bash
+cd frontend
+npm install
+npm run dev
+
+# Acesse em: http://localhost:3000
+```
+> O frontend funciona mesmo sem o backend rodando, exibindo dados demo dos serviços reais de Niterói.
+---
+ Páginas e Telas
+1. Tela – Mapa (aba principal)
+Exibe um mapa interativo centrado em Niterói/RJ com marcadores coloridos para cada tipo de serviço.
+Funcionalidades:
+Mapa com marcadores por categoria (delegacia, abrigo, jurídico, saúde, etc.)
+Lista lateral com cards dos serviços filtrados
+Clique no marcador ou card abre o Drawer de Detalhes
+Filtro por categoria e busca por nome/bairro
+Endpoints consumidos:
+```
+GET /api/servicos
+GET /api/servicos?categoriaId={id}
+GET /api/servicos?busca={termo}
+```
+---
+ 2. Tela – Lista
+Exibe todos os serviços em formato de cards com nome, endereço, categoria e horário de funcionamento.
+Funcionalidades:
+Listagem completa dos serviços
+Filtro por categoria e busca por nome/bairro
+Clique no card redireciona para o Mapa com o serviço selecionado
+Endpoints consumidos:
+```
+GET /api/servicos
+GET /api/servicos?categoriaId={id}
+GET /api/servicos?busca={termo}
+```
+---
+3. Tela – Cadastrar Serviço
+Formulário para cadastrar um novo serviço de apoio no mapa.
+Campos: Nome, Categoria, Telefone, Endereço, Bairro, Funcionamento, Descrição, Latitude, Longitude.
+Endpoints consumidos:
+```
+POST /api/servicos
+```
+---
+ 4. Componente – Drawer de Detalhes
+Painel lateral que aparece ao clicar em um serviço, exibindo todas as informações e avaliações.
+Funcionalidades:
+Exibe endereço, telefone, WhatsApp, horário e descrição
+Lista as avaliações com estrelas e comentários
+Botão para abrir o Modal de Avaliação
+Endpoints consumidos:
+```
+GET /api/servicos/{id}
+GET /api/avaliacoes?servicoId={id}
+GET /api/avaliacoes/media?servicoId={id}
+```
+---
+ 5. Componente – Modal de Avaliação
+Modal que aparece ao clicar em "Avaliar este serviço".
+Campos: Nome (opcional), Nota (1 a 5 estrelas), Comentário.
+Endpoints consumidos:
+```
+POST /api/avaliacoes?servicoId={id}&usuarioId={id}
+```
+---
+ Componentes reutilizáveis
+Componente	Descrição
+`Navbar` (Header)	Cabeçalho com logo, botão Ligue 180 e WhatsApp de denúncia
+`CardServico`	Card compacto usado na lista lateral do mapa
+`DrawerDetalhe`	Painel lateral de detalhes do serviço
+`ModalAvaliacao`	Modal para envio de avaliação
+`FormCadastro`	Formulário de cadastro de novo serviço
+`MapaNiteroi`	Componente do mapa Leaflet centrado em Niterói
+`Estrelas`	Componente de avaliação por estrelas (estático e interativo)
+`Badge`	Etiqueta colorida de categoria
+`Footer`	Rodapé com informações de emergência
