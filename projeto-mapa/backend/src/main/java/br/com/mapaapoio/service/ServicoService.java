@@ -2,38 +2,29 @@ package br.com.mapaapoio.service;
 
 import br.com.mapaapoio.model.Servico;
 import br.com.mapaapoio.repository.ServicoRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class ServicoService {
 
     private final ServicoRepository repo;
 
-    public List<Servico> listarAtivos() {
-        return repo.findByAtivoTrue();
+    public ServicoService(ServicoRepository repo) {
+        this.repo = repo;
     }
 
-    public List<Servico> listarPorCategoria(Long categoriaId) {
-        return repo.findByCategoriaIdAndAtivoTrue(categoriaId);
-    }
-
-    public List<Servico> buscar(String termo) {
-        return repo.buscarPorTermo(termo);
-    }
+    public List<Servico> listarAtivos() { return repo.findByAtivoTrue(); }
+    public List<Servico> listarPorCategoria(Long categoriaId) { return repo.findByCategoriaIdAndAtivoTrue(categoriaId); }
+    public List<Servico> buscar(String termo) { return repo.buscarPorTermo(termo); }
 
     public Servico buscarPorId(Long id) {
-        return repo.findById(id)
-            .orElseThrow(() -> new RuntimeException("Serviço não encontrado: " + id));
+        return repo.findById(id).orElseThrow(() -> new RuntimeException("Serviço não encontrado: " + id));
     }
 
     @Transactional
-    public Servico criar(Servico servico) {
-        return repo.save(servico);
-    }
+    public Servico criar(Servico servico) { return repo.save(servico); }
 
     @Transactional
     public Servico atualizar(Long id, Servico dados) {
@@ -57,7 +48,7 @@ public class ServicoService {
     @Transactional
     public void deletar(Long id) {
         Servico servico = buscarPorId(id);
-        servico.setAtivo(false); // soft delete
+        servico.setAtivo(false);
         repo.save(servico);
     }
 }

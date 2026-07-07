@@ -1,11 +1,9 @@
 package br.com.mapaapoio.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
 @Table(name = "categorias")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Categoria {
 
     @Id
@@ -14,4 +12,9 @@ public class Categoria {
 
     @Column(nullable = false, unique = true, length = 100)
     private String nome;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 }
