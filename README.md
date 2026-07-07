@@ -1,5 +1,7 @@
-💜 Mapa de Apoio à Mulher – Niterói/RJ
+Mapa de Apoio à Mulher – Niterói/RJ
+
 ODS escolhida: ODS 5 – Igualdade de Gênero
+
 Problema que resolve: Mulheres em situação de violência muitas vezes não sabem onde buscar ajuda. O projeto centraliza e mapeia todos os serviços de apoio do município de Niterói em uma plataforma interativa e acessível.
 Público-alvo: Mulheres em situação de vulnerabilidade ou violência no município de Niterói/RJ, e também profissionais e voluntários que precisam indicar serviços.
 
