@@ -7,7 +7,7 @@ Aluna: Rafaella Musmanno
 ODS escolhida: ODS 5 – Igualdade de Gênero
 
 Objetivo do projeto:
-Plataforma interativa que mapeia e centraliza os serviços de apoio à mulher no município de Niterói/RJ — como delegacias, centros de referência, assistência jurídica, saúde e canais de denúncia. O objetivo é facilitar o acesso à informação para mulheres em situação de vulnerabilidade ou violência, reduzindo o tempo que levam para encontrar ajuda.
+Plataforma interativa que mapeia e centraliza os serviços de apoio à mulher no município de Niterói/RJ — como delegacias, centros de referência, assistência jurídica, saúde e canais de denúncia. O objetivo é facilitar o acesso à informação para mulheres em situação de vulnerabilidade ou violência, reduzindo o tempo que levam para encontrar ajuda. As mesmas também podem incluir os equipamentos que compreendem como rede de apoio.
 
 Utilizados:
 
