@@ -1,10 +1,13 @@
 Mapa de Apoio à Mulher – Niterói/RJ
 
+Nome do projeto: Mapa de Apoio à Mulher – Niterói/RJ
+
+Aluna: Rafaella Musmanno
+
 ODS escolhida: ODS 5 – Igualdade de Gênero
 
-Problema que resolve: Mulheres em situação de violência muitas vezes não sabem onde buscar ajuda. O projeto centraliza e mapeia todos os serviços de apoio do município de Niterói em uma plataforma interativa e acessível.
-Público-alvo: Mulheres em situação de vulnerabilidade ou violência no município de Niterói/RJ, e também profissionais e voluntários que precisam indicar serviços.
-
+Objetivo do projeto:
+Plataforma interativa que mapeia e centraliza os serviços de apoio à mulher no município de Niterói/RJ — como delegacias, centros de referência, assistência jurídica, saúde e canais de denúncia. O objetivo é facilitar o acesso à informação para mulheres em situação de vulnerabilidade ou violência, reduzindo o tempo que levam para encontrar ajuda.
 
 Utilizados:
 
@@ -20,6 +23,36 @@ Usuários — cadastro, listagem, atualização e remoção
 Serviços — cadastro, busca por categoria, atualização e remoção
 
 Avaliações — criar, listar por serviço, calcular média, atualizar e remover
+
+Como rodar
+
+Banco de Dados (MySQL)
+
+O arquivo SQL está em: projeto-mapa/banco/schema.sql
+
+Execute no MySQL Workbench ou terminal:
+
+sqlSOURCE projeto-mapa/banco/schema.sql;
+
+Back-end (Java + Spring Boot)
+
+bashcd projeto-mapa/backend
+mvn spring-boot:run
+
+A API ficará disponível em: http://localhost:8080
+
+Antes de rodar, configure sua senha do MySQL em:
+projeto-mapa/backend/src/main/resources/application.properties
+
+Front-end (ReactJS + Vite)
+
+bashcd projeto-mapa/frontend
+npm install
+npm run dev
+
+Acesse em: http://localhost:3000
+
+O frontend funciona mesmo sem o backend, exibindo os 10 serviços reais de Niterói como dados demo.
 
 Funcionalidades do sistema:
 
